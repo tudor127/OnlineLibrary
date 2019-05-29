@@ -1,0 +1,5 @@
+.panel{
+	width:800px;
+	background:red;
+	min-height:400px;
+}

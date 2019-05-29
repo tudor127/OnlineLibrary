@@ -1,19 +1,3 @@
-html,body{
-	margin:0;
-	height: 100%;
-	background: #163d6b;
-}
-
-
-.navbar{
-	width:35px;
-	background:#eee;
-	height: 100%;
-	float:left;
-	position: fixed;
-	z-index: 2;
-	transition-duration: 0.7s;
-}
 
 .content{
 	width:97%;
@@ -30,45 +14,17 @@ html,body{
 	margin-bottom: 50px;
 }
 
-.menuHided {
-	width:35px;
-	background:#142233;
-	text-align: center;
-	color: #eee;
-	padding-top: 230px;
-	display: block;
-	transition-duration: 0.7s;
-	float: right;
-	height: 100%;
-}
 
-.menuShowed{
-	color: #142233;
-	transition-duration: 0.7s;
-	width: 0;
-	overflow: hidden;
-}
-
-.menuShowed ul{
-	transition-duration: 0.7s;
-	list-style-type: none;
-	font-size: 20px;
-}
-
-.menuShowed ul li{
-min-width: 200px;
-}
-
-.menuHided p{
-	transition-duration: 0.7s;
-}
 
 .item{
-	min-width: 240px;
+	width: 240px;
 	height: 300px;
 	float: left;
-	margin-bottom: 50px;
+	margin-bottom: 130px;
 	transition-duration: 0.55s;
+	background: transparent;
+	border:none;
+ 
 }
 
 .item:hover{
@@ -83,6 +39,7 @@ min-width: 200px;
 	background: #eee;
 	height: 180px;
 	text-align: center;
+	width: 160px;
 }
 
 .pic img{
@@ -98,9 +55,103 @@ min-width: 200px;
     height: 80px;
     text-align: center;
     margin-top: 20px;
-    padding-top: 20px;
-    font-size: 20px;
+    padding-top: 5px;
+    font-size: 17px;
     font-family: Arial;
 
 }
 
+.desc p{
+	width: 90%;
+	text-align: center;
+}
+
+.pagination{
+	width:99%;
+	float: left;
+	margin-top: 120px;
+	margin-bottom: 80px;
+	margin-left: 1%;
+}
+
+.pagination form{
+	width:50px;
+	float: left;
+	margin: 5px;
+}
+
+
+.pagination input[type='submit']{
+width: 40px;
+cursor: pointer;
+padding: 3px 2px;
+background: #163d6b;
+border: 2px solid #eee;
+color: #eee;
+}
+
+.pagination input[type='submit']:hover{
+  background: #eee;
+  color: #163d6b;
+}
+
+.activeBtn{
+	background: #eee;
+  color: #163d6b;
+}
+
+.filter{
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
+	height:120px;
+	background: #ccc;
+	border-radius: 5px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	font-family: Georgia,sans-serif;
+	color: #163d6b;
+
+
+}
+
+.filter button{
+	padding: 3px 14px;
+	background: #163d6b;
+	color: #eee;
+	border:0;
+	font-size:14px;
+	cursor: pointer;
+	
+
+}
+
+.filter input[type='text']{
+	padding: 3px 14px;
+	font-size: 15px;
+	margin-right: 30px;
+}
+
+.filter select{
+	padding: 3px 14px;
+	margin-right: 30px;
+}
+
+.filter input[type='number']{
+ padding: 3px 14px;
+ margin-right: 30px;
+}
+
+
+.stat{
+	width:900px;
+	margin-left: auto;
+	margin-right: auto;
+	min-height:800px;
+	background: #eee;
+	padding: 50px;
+    font-size: 17px;
+    color: #163d6b;
+    
+    font-family: Georgia,sans-serif;
+}

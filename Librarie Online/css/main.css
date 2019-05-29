@@ -1,0 +1,147 @@
+html,body{
+	margin:0;
+	height: 100%;
+	background: #163d6b;
+	min-width: 1500px;
+}
+
+.content{
+	width:97%;
+	min-height:800px;
+	float: right;
+}
+
+
+.navbar{
+	width:35px;
+	background:#eee;
+	height: 100%;
+	float:left;
+	position: fixed;
+	z-index: 2;
+	transition-duration: 0.7s;
+}
+
+
+.menuHided {
+	width:35px;
+	background:#142233;
+	text-align: center;
+	color: #eee;
+	padding-top: 230px;
+	display: block;
+	transition-duration: 0.7s;
+	float: right;
+	height: 100%;
+}
+
+.menuShowed{
+	color: #142233;
+	transition-duration: 0.7s;
+	width: 0;
+	overflow: hidden;
+}
+
+
+.menuList li{
+width: 260px;
+margin-bottom: 12px;
+padding-top: 4px;
+padding-bottom: 4px;
+border:3px solid #163d6b;
+margin-left: -20px;
+padding-left: 10px;
+}
+
+.menuList li:hover{
+	background: #163d6b;
+	color: #fff;
+}
+
+
+.menuList{
+	list-style-type: none;
+	font-size: 20px;
+}
+
+.menuList a{
+text-decoration: none;
+color: #142233;
+}
+
+.menuHided p{
+	transition-duration: 0.7s;
+}
+
+#liDrop ul{
+	transition-duration: 0.6s;
+}
+
+#menuDrop{
+    margin-top: 0px;
+	width: 100%;
+	height: 0px;
+	overflow: hidden;
+    list-style-type: none;
+}
+#menuDrop li:hover{
+	color: #aaa;
+	cursor: pointer;
+}
+
+#liDrop{
+	
+}
+
+#liDrop:hover{
+	
+}
+
+#menuDrop li{
+	margin-left: -48px;
+	border:0px;
+	width: 250px;
+	margin-top: 10px;
+	margin-bottom: 0px;
+}
+
+
+
+#imgDrop1{
+	height:7.4px;
+	overflow: hidden;
+	float: right;
+	margin-right: 10px;
+	margin-top: 7px;
+}
+
+#imgDrop2{
+	overflow: hidden;
+	height: 0px;
+	margin-top: 1.8px;
+	margin-right: -3px;
+	float: right;
+}
+
+.logOutBtn{
+width: 275px;
+margin-bottom: 12px;
+padding-top: 4px;
+padding-bottom: 4px;
+border:3px solid #163d6b;
+margin-left: -20px;
+padding-left: 10px;
+background: #eee;
+color: #163d6b;
+font-size: 17px;
+	text-align: left;
+	color: #142233;
+	cursor: pointer;
+}
+
+.logOutBtn:hover{
+	color: #eee;
+	background: darkred;
+	border-color: darkred;
+}
+

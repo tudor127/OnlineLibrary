@@ -1,28 +1,28 @@
 <!DOCTYPE html>
      
-	 <html>
+   <html>
      
-	 <head>
+   <head>
      
-	 <meta charset="utf-8"/>
-	 
-	 <title>Online Library</title>
+   <meta charset="utf-8"/>
+   
+   <title>Online Library</title>
      
-	 <link rel="stylesheet" type="text/css" href="css/index.css"/> 
+   <link rel="stylesheet" type="text/css" href="css/index.css"/> 
    <link rel="stylesheet" type="text/css" href="css/main.css"/> 
-	 
-	 <link rel='icon' href="../img/fav.png">
+   
+   <link rel='icon' href="../img/fav.png">
      
-	 </head>
+   </head>
      
-	 <body>
+   <body>
     <!-- navbar -->
-	<?php include 'include/nav.php'; ?>
+  <?php include 'include/nav.php'; ?>
   <!-- db conn -->
-	<?php require_once 'include/conn.php';?>
+  <?php require_once 'include/conn.php';?>
    
    <div class="content">
-	 	<h1>Librarie Online</h1>    <br><br>
+    <h1>Librarie Online</h1>    <br><br>
 
 <?php
 $stidCount = oci_parse($conn, 'select * from carte');
@@ -40,7 +40,7 @@ if(isset($_POST['number'])){
 }
 $min=(($pageNumber-1)*18)+1;
 $max=$min+18;
-$stid = oci_parse($conn, 'select * from preview where idCarte>=:min and idCarte<:max');
+$stid = oci_parse($conn, 'select * from carte where idCarte>=:min and idCarte<:max');
 oci_bind_by_name($stid, ':min', $min);
 oci_bind_by_name($stid, ':max', $max);
 oci_execute($stid);
@@ -50,12 +50,12 @@ while (($row = oci_fetch_array($stid, OCI_BOTH)) != false) {
         echo '<form method="post" action="detalii.php"> 
         <button class="item" type="submit" value='.$row[0].' name="idCarte">
         <div class="pic">
-          <img src="img/'.$row[4].'.jpg"/>
+          <img src="img/'.$row[8].'.jpg"/>
         </div>
         <div class="desc">
-          <p>'.ucfirst($row[1]).'</p>
-          <p style="font-size:14px">Editura:'.ucfirst($row[2]).'</p>
-            <p>$'.$row[3].'</p>
+          <p>'.ucfirst($row[2]).'</p>
+          <p style="font-size:14px">Editura:'.ucfirst($row[4]).'</p>
+            <p>$'.$row[7].'</p>
         </div>
        </button> 
        </form>';
@@ -80,7 +80,7 @@ for($i=1;$i<=$pages;$i++){
 ?>
    </div>
 
-	 </div>
+   </div>
   
    
      <?php // Free the statement identifier when closing the connection
